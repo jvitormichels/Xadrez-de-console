@@ -20,6 +20,27 @@
             QteDeMovimentos++;
         }
 
+        public bool ExisteMovimentosPossiveis()
+        {
+            bool[,] aux = MovimentosPossiveis();
+            for (int i = 0; i < Tab.Linhas; i++)
+            {
+                for (int j = 0; j < Tab.Colunas; j++)
+                {
+                    if (aux[i,j])
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool MovimentoPossivel(Posicao pos)
+        {
+            return MovimentosPossiveis()[pos.linha, pos.coluna];
+        }
+
         public abstract bool[,] MovimentosPossiveis();
     }
 }
