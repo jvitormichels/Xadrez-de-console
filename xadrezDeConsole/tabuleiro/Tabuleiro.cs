@@ -53,7 +53,7 @@
 
         public bool PosicaoValida(Posicao pos)
         {
-            if (pos.linha < 0 || pos.linha >= this.Linhas || pos.coluna < 0 || pos.coluna > this.Colunas)
+            if (pos.linha < 0 || pos.linha >= this.Linhas || pos.coluna < 0 || pos.coluna >= this.Colunas)
             {
                 return false;
             }
