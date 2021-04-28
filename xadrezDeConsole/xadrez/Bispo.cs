@@ -29,6 +29,7 @@ namespace xadrez
                     break;
                 }
                 pos.linha = pos.linha - 1;
+                pos.coluna = pos.coluna - 1;
             }
 
             //Baixo - Direita
@@ -41,6 +42,7 @@ namespace xadrez
                     break;
                 }
                 pos.linha = pos.linha + 1;
+                pos.coluna = pos.coluna + 1;
             }
 
             //Cima - Direita
@@ -52,6 +54,7 @@ namespace xadrez
                 {
                     break;
                 }
+                pos.linha = pos.linha - 1;
                 pos.coluna = pos.coluna + 1;
             }
 
@@ -64,6 +67,7 @@ namespace xadrez
                 {
                     break;
                 }
+                pos.linha = pos.linha + 1;
                 pos.coluna = pos.coluna - 1;
             }
 
