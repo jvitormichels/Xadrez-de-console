@@ -238,6 +238,21 @@ namespace xadrez
                 throw new TabuleiroException("VocÊ não pode se colocar em xeque!");
             }
 
+            Peca p = Tab.QualPeca(destino);
+
+            //#JogadaEspecial - Promocao
+            if (p is Peao)
+            {
+                if ((destino.linha == 0) || (destino.linha == 7)) 
+                {
+                    p = Tab.RetirarPeca(destino);
+                    _pecas.Remove(p);
+                    Peca dama = new Dama(Tab, p.Cor);
+                    Tab.ColocarPeca(dama, destino);
+                    _pecas.Add(dama);
+                }
+            }
+
             if (EstaEmXeque(Adversaria(JogadorAtual)))
             {
                 Xeque = true;
@@ -258,8 +273,7 @@ namespace xadrez
             }
 
 
-            //#JogadaEspecial - En Passant
-            Peca p = Tab.QualPeca(destino);
+            //#JogadaEspecial - En Passant            
             if (p is Peao && (destino.linha == origem.linha - 2 || destino.linha == origem.linha + 2))
             {
                 VulneravelEnPassant = p;
