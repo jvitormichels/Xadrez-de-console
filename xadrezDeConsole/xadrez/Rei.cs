@@ -4,11 +4,11 @@ namespace xadrez
 {
     class Rei : Peca
     {
-        private PartidaDeXadrez partida;
+        private PartidaDeXadrez _partida;
 
         public Rei (Tabuleiro tab, Cor cor, PartidaDeXadrez partida) : base(cor, tab)
         {
-            this.partida = partida;
+            _partida = partida;
         }
 
         public bool PodeMover(Posicao pos)
@@ -86,7 +86,7 @@ namespace xadrez
 
 
             
-            if (QteDeMovimentos == 0 && !partida.Xeque)
+            if (QteDeMovimentos == 0 && !_partida.Xeque)
             {
                 //#JogadaEspecial - Roque pequeno
                 Posicao posTorre1 = new Posicao(this.Posicao.linha, this.Posicao.coluna + 3);
