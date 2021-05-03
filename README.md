@@ -29,4 +29,4 @@ Praticamente todas as peças, mecânicas e jogadas especiais foram devidamente i
 
 * [Programação orientada a objetos](https://docs.microsoft.com/pt-br/dotnet/csharp/tutorials/intro-to-csharp/object-oriented-programming#:~:text=O%20C%23%20%C3%A9%20uma%20linguagem%20de,representa%C3%A7%C3%A3o%20abstrata%20de%20um%20sistema.)
 * [Tratamento de exceções em C#](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/exceptions/)
-* [Como jogar xadrez xadrez](https://www.chess.com/pt-BR/como-jogar-xadrez)
+* [Como jogar xadrez](https://www.chess.com/pt-BR/como-jogar-xadrez)
